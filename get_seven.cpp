@@ -1,11 +1,7 @@
 #include "get_seven.h"
-
-int internal_do_calculation();
+#include "internal7.h"
 
 int PublicGetSeven() {
     return internal_do_calculation();
 }
 
-int internal_do_calculation() {
-    return 7;
-}
