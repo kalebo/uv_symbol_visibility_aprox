@@ -1,6 +1,9 @@
-int GLOBAL=7;
+static int special_global[2] = { 7, 7 };
 
-int internal_do_calculation() {
-    return GLOBAL;
+void internal_init() {
+    special_global[0] += 7;
 }
 
+int internal_get() {
+    return special_global[0];
+}

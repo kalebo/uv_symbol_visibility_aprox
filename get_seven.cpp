@@ -2,6 +2,9 @@
 #include "internal7.h"
 
 int PublicGetSeven() {
-    return internal_do_calculation();
+    return internal_get();
 }
 
+void PublicInitSeven() {
+    internal_init();
+}

@@ -17,9 +17,9 @@ test: test.cpp libget_three.so libget_seven.so
 
 
 internal3.o: internal3.h internal3.cpp
-	g++ $(CFLAGS) $(SO_CFLAGS) -o internal3.o -c -fPIC internal3.cpp
+	g++ $(CFLAGS) $(A_CFLAGS) -o internal3.o -c -fPIC internal3.cpp
 libinternal3.a: internal3.o
-	ar -rcs libinternal3.a internal3.o
+	ar rcsT libinternal3.a internal3.o
 
 libget_three.so: get_three.o libinternal3.a
 	g++ $(SO_LDFLAGS) -o libget_three.so -shared get_three.o -L. -l:libinternal3.a
@@ -32,9 +32,9 @@ get_three.o: get_three.cpp get_three.h
 
 
 internal7.o: internal7.h internal7.cpp
-	g++ $(CFLAGS) $(SO_CFLAGS) -o internal7.o -c -fPIC internal7.cpp
+	g++ $(CFLAGS) $(A_CFLAGS) -o internal7.o -c -fPIC internal7.cpp
 libinternal7.a: internal7.o
-	ar -rcs libinternal7.a internal7.o
+	ar rcsT libinternal7.a internal7.o
 
 libget_seven.so: get_seven.o libinternal7.a
 	g++ $(SO_LDFLAGS) -o libget_seven.so -shared get_seven.o -L. -l:libinternal7.a

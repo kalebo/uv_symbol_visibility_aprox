@@ -6,7 +6,8 @@
 
 
 int MyOwnGet() {
-        return internal_do_calculation();
+        internal_init();
+	return internal_get();
 }
 
 int main() {

@@ -2,5 +2,9 @@
 #include "internal3.h"
 
 int PublicGetThree() {
-	return internal_do_calculation();
+    return internal_get();
+}
+
+void PublicInitSeven() {
+    internal_init();
 }
