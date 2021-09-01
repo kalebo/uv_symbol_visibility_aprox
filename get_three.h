@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 __attribute__((__visibility__("default"))) int PublicGetThree();
-__attribute__((__visibility__("default"))) int PublicInitThree();
+__attribute__((__visibility__("default"))) void PublicInitThree();
 
 #ifdef __cplusplus
 }

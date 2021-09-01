@@ -5,6 +5,6 @@ int PublicGetThree() {
     return internal_get();
 }
 
-void PublicInitSeven() {
+void PublicInitThree() {
     internal_init();
 }
